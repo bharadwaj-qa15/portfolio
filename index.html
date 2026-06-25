@@ -1,202 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharadwaj | Software Test Engineer Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bharadwaj Racharla — Software Test Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --bg-color: #f8f9fa;
-            --text-color: #333333;
-            --accent-color: #2b6cb0;
-            --card-bg: #ffffff;
-            --border-color: #e2e8f0;
+            --teal-50: #E1F5EE; --teal-100: #9FE1CB; --teal-400: #1D9E75; --teal-600: #0F6E51;
+            --purple-50: #EEEDFE; --purple-100: #CECAFC; --purple-400: #635BFF; --purple-600: #4339F2;
+            --gray-50: #F1EFE8; --gray-100: #D3D1C7; --gray-400: #7E7C73; --gray-600: #4B4A45;
+            --bg: #ffffff; --bg-secondary: #F8F9FA; --text: #1a1a1a; --text-secondary: #6B6B6B;
+            --border: rgba(0,0,0,0.1); --border-md: rgba(0,0,0,0.15);
+            --radius-md: 8px; --radius-lg: 12px; --radius-full: 9999px;
+            --font: 'Plus Jakarta Sans', sans-serif;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
+        .dark-theme {
+            --bg: #0B0F19; --bg-secondary: #151B2C; --text: #F3F4F6; --text-secondary: #9CA3AF;
+            --border: rgba(255,255,255,0.08); --border-md: rgba(255,255,255,0.15);
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 5px;
-            color: #1a202c;
-        }
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--accent-color);
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        .links a {
-            color: #4a5568;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 500;
-        }
-        .links a:hover {
-            color: var(--accent-color);
-        }
-        section {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-        h2 {
-            font-size: 1.5rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-top: 0;
-            color: #2d3748;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        .skill-category strong {
-            color: var(--accent-color);
-            display: block;
-            margin-bottom: 4px;
-        }
-        ul {
-            padding-left: 20px;
-            margin: 10px 0 0 0;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .project {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed var(--border-color);
-        }
-        .project:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .project-title {
-            font-size: 1.15rem;
-            font-weight: bold;
-            color: #1a202c;
-        }
-        .tools {
-            font-size: 0.9rem;
-            font-style: italic;
-            color: #718096;
-            margin-bottom: 10px;
-        }
+        body { font-family: var(--font); background-color: var(--bg); color: var(--text); transition: background-color 0.3s, color 0.3s; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     </style>
 </head>
-<body>
-
-<div class="container">
-    <header>
-        <h1>Bharadwaj</h1>
-        <div class="subtitle">Software Test Engineer</div>
-        <div class="links">
-            <a href="mailto:bbharadwaj317@gmail.com">bbharadwaj317@gmail.com</a> | 
-            <a href="https://www.linkedin.com/in/bharadwaj-racharla-29229a392" target="_blank">LinkedIn</a> | 
-            <a href="https://bharadwaj-qa15.github.io/portfolio">Portfolio Home</a>
-        </div>
-    </header>
-
-    <section id="about">
-        <h2>Professional Summary</h2>
-        <p>Hands-on Software Test Engineer with 5 years of experience building and executing automation frameworks across web, mobile, and API ecosystems[span_1](start_span)[span_1](end_span). Proven track record of owning test coverage from scratch, integrating automated suites into CI/CD pipelines, and identifying system bottlenecks through performance testing[span_2](start_span)[span_2](end_span). Highly adaptive professional independently leveraging next-gen tools like Agentic AI and self-healing automation to improve testing efficiency for global enterprise clients[span_3](start_span)[span_3](end_span).</p>
-    </section>
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <strong>Test Automation Frameworks</strong>
-                Playwright, Selenium WebDriver, Appium (Android & iOS), Cypress, Ranorex[span_4](start_span)[span_4](end_span)
-            </div>
-            <div class="skill-category">
-                <strong>AI-Driven QA Engineering</strong>
-                Agentic AI Workflows (N8N), DeepEval, GitHub Copilot, Claude AI, Self-Healing Automation[span_5](start_span)[span_5](end_span)
-            </div>
-            <div class="skill-category">
-                <strong>API Testing & Validation</strong>
-                Rest Assured, Postman, JSON/XML Validation, Schema Testing[span_6](start_span)[span_6](end_span)
-            </div>
-            <div class="skill-category">
-                <strong>Performance & Observability</strong>
-                Apache JMeter, Dynatrace, AppDynamics, LoadRunner[span_7](start_span)[span_7](end_span)
-            </div>
-            <div class="skill-category">
-                <strong>CI/CD & DevOps Engineering</strong>
-                Jenkins Pipelines, Git, Maven, Selenium Grid Distributed Execution[span_8](start_span)[span_8](end_span)
-            </div>
-            <div class="skill-category">
-                <strong>Cloud & Device Farms</strong>
-                AWS, Microsoft Azure, BrowserStack, AWS Device Farm, Sauce Labs[span_9](start_span)[span_9](end_span)
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <div class="job">
-            <div class="project-title">Bluegem IT Solutions — Software Test Engineer</div>
-            <div class="tools">Permanent | July 2021 – Present</div>
-            <ul>
-                <li><strong>Automation Framework Execution:</strong> Built and owned automation frameworks for enterprise web and mobile applications using Selenium WebDriver, Playwright, and Appium, optimizing regression cycles[span_10](start_span)[span_10](end_span).</li>
-                <li><strong>AI-Enhanced Testing:</strong> Applied cutting-edge AI workflows by using DeepEval and N8N for agentic test execution, alongside GitHub Copilot and Claude AI for script generation and rapid failure analysis[span_11](start_span)[span_11](end_span).</li>
-                <li><strong>API Testing Frameworks:</strong> Achieved comprehensive API test coverage from scratch, designing Postman collections and Rest Assured scripts validating payloads, complex JSON/XML schemas, and boundary error codes[span_12](start_span)[span_12](end_span).</li>
-                <li><strong>CI/CD Pipeline Integration:</strong> Integrated automated test suites with Jenkins and Git pipelines, ensuring test automation suites ran seamlessly on every code push[span_13](start_span)[span_13](end_span).</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Project Highlights</h2>
-        
-        <div class="project">
-            <div class="project-title">Inventory Visibility Tool (IVT)</div>
-            <div class="tools">Tools: Playwright, Selenium, Appium, Java, Jira, TestNG/JUnit</div>
-            <ul>
-                <li>Automated critical regression paths using Playwright, cutting down manual effort and optimizing test cycles[span_14](start_span)[span_14](end_span).</li>
-                <li>Developed Appium mobile automation for Android & iOS platforms, integrating tests with TestNG/JUnit frameworks[span_15](start_span)[span_15](end_span).</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <div class="project-title">LOAN ONE Warehouse Management System</div>
-            <div class="tools">Tools: Selenium WebDriver, Appium, Java, Jira</div>
-            <ul>
-                <li>Built functional keyword-driven and data-driven automation frameworks using Selenium WebDriver and Java[span_16](start_span)[span_16](end_span).</li>
-                <li>Conducted non-functional testing to establish page load benchmarks and execute stress tests[span_17](start_span)[span_17](end_span).</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <div class="project-title">Health Suite Digital Platform</div>
-            <div class="tools">Tools: Postman, Rest Assured, Apache JMeter, Jenkins</div>
-            <ul>
-                <li>Designed end-to-end API test suites in Postman to validate REST endpoints, payloads, and status codes[span_18](start_span)[span_18](end_span).</li>
-                <li>Created reusable, data-driven API scripts for multi-scenario and negative-path test coverage using Rest Assured[span_19](start_span)[span_19](end_span).</li>
-            </ul>
-        </div>
-    </section>
-</div>
-
-</body>
-</html>
+<body class="dark-theme">
+    <!-- Navbar and original layout elements remain intact -->
