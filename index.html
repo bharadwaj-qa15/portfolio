@@ -1,30 +1,382 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bharadwaj Racharla — Software Test Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bharadwaj - Software Test Engineer specializing in Selenium, Playwright, Appium, API Testing, Performance Testing and AI-driven QA.">
+    <meta name="keywords" content="Software Test Engineer, Selenium, Playwright, Appium, API Testing, QA Automation">
+    <meta name="author" content="Bharadwaj">
+
+    <title>Bharadwaj | Software Test Engineer</title>
+
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --teal-50: #E1F5EE; --teal-100: #9FE1CB; --teal-400: #1D9E75; --teal-600: #0F6E51;
-            --purple-50: #EEEDFE; --purple-100: #CECAFC; --purple-400: #635BFF; --purple-600: #4339F2;
-            --gray-50: #F1EFE8; --gray-100: #D3D1C7; --gray-400: #7E7C73; --gray-600: #4B4A45;
-            --bg: #ffffff; --bg-secondary: #F8F9FA; --text: #1a1a1a; --text-secondary: #6B6B6B;
-            --border: rgba(0,0,0,0.1); --border-md: rgba(0,0,0,0.15);
-            --radius-md: 8px; --radius-lg: 12px; --radius-full: 9999px;
-            --font: 'Plus Jakarta Sans', sans-serif;
+        :root{
+            --bg:#f5f7fb;
+            --card:#fff;
+            --primary:#2b6cb0;
+            --text:#333;
+            --border:#e2e8f0;
         }
-        .dark-theme {
-            --bg: #0B0F19; --bg-secondary: #151B2C; --text: #F3F4F6; --text-secondary: #9CA3AF;
-            --border: rgba(255,255,255,0.08); --border-md: rgba(255,255,255,0.15);
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
-        body { font-family: var(--font); background-color: var(--bg); color: var(--text); transition: background-color 0.3s, color 0.3s; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+        body{
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.6;
+        }
+
+        .container{
+            max-width:950px;
+            margin:auto;
+            padding:30px 20px;
+        }
+
+        header{
+            text-align:center;
+            padding:40px 0;
+        }
+
+        h1{
+            font-size:3rem;
+            color:#1a202c;
+        }
+
+        .subtitle{
+            color:var(--primary);
+            font-size:1.3rem;
+            font-weight:600;
+            margin:10px 0;
+        }
+
+        .tagline{
+            color:#666;
+            margin-bottom:20px;
+        }
+
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+            margin-bottom:30px;
+        }
+
+        nav a{
+            color:var(--primary);
+            text-decoration:none;
+            font-weight:600;
+        }
+
+        nav a:hover{
+            text-decoration:underline;
+        }
+
+        .links{
+            margin-top:15px;
+        }
+
+        .links a{
+            color:#555;
+            text-decoration:none;
+            margin:0 10px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            background:var(--primary);
+            color:#fff;
+            padding:12px 22px;
+            border-radius:6px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:#1f4f85;
+        }
+
+        section{
+            background:var(--card);
+            padding:30px;
+            border-radius:10px;
+            margin-bottom:25px;
+            border:1px solid var(--border);
+            box-shadow:0 8px 20px rgba(0,0,0,.05);
+        }
+
+        h2{
+            margin-bottom:20px;
+            border-bottom:2px solid var(--border);
+            padding-bottom:8px;
+            color:#2d3748;
+        }
+
+        .skills{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .skill{
+            padding:15px;
+            background:#fafafa;
+            border-radius:8px;
+        }
+
+        .skill strong{
+            display:block;
+            color:var(--primary);
+            margin-bottom:8px;
+        }
+
+        .project{
+            border-bottom:1px solid #ddd;
+            padding:20px 0;
+            transition:.3s;
+        }
+
+        .project:last-child{
+            border:none;
+        }
+
+        .project:hover{
+            transform:translateY(-4px);
+        }
+
+        ul{
+            margin-left:20px;
+            margin-top:10px;
+        }
+
+        li{
+            margin-bottom:10px;
+        }
+
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#777;
+        }
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:2.2rem;
+            }
+
+            .links{
+                display:flex;
+                flex-direction:column;
+                gap:10px;
+            }
+
+            nav{
+                gap:15px;
+            }
+        }
+
     </style>
+
 </head>
-<body class="dark-theme">
-    <!-- Navbar and original layout elements remain intact -->
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1>Bharadwaj</h1>
+
+<div class="subtitle">
+Software Test Engineer
+</div>
+
+<p class="tagline">
+Automation • API Testing • Mobile Testing • Performance Testing • AI-driven QA
+</p>
+
+<div class="links">
+<a href="mailto:bbharadwaj317@gmail.com">Email</a> |
+<a href="https://www.linkedin.com/in/bharadwaj-racharla-29229a392" target="_blank">LinkedIn</a> |
+<a href="https://github.com/bharadwaj-qa15" target="_blank">GitHub</a>
+</div>
+
+<a class="btn" href="resume.pdf" download>Download Resume</a>
+
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+</nav>
+
+<section id="about">
+
+<h2>Professional Summary</h2>
+
+<p>
+
+Software Test Engineer with 5+ years of experience designing automation frameworks for Web, Mobile and API testing. Experienced in Selenium, Playwright, Appium, Rest Assured, Jenkins, Performance Testing and AI-assisted QA workflows. Passionate about delivering high-quality software through scalable automation and continuous integration.
+
+</p>
+
+</section>
+
+<section id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+<strong>Automation</strong>
+Playwright, Selenium WebDriver, Cypress, Appium, Ranorex
+</div>
+
+<div class="skill">
+<strong>Programming</strong>
+Java, TestNG, JUnit
+</div>
+
+<div class="skill">
+<strong>API Testing</strong>
+Rest Assured, Postman, JSON, XML
+</div>
+
+<div class="skill">
+<strong>Performance</strong>
+Apache JMeter, LoadRunner, Dynatrace, AppDynamics
+</div>
+
+<div class="skill">
+<strong>CI/CD</strong>
+Jenkins, Git, Maven, Selenium Grid
+</div>
+
+<div class="skill">
+<strong>Cloud</strong>
+AWS, Azure, BrowserStack, Sauce Labs, AWS Device Farm
+</div>
+
+<div class="skill">
+<strong>AI in QA</strong>
+GitHub Copilot, Claude AI, DeepEval, n8n Agentic Workflows
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2>Professional Experience</h2>
+
+<h3>Software Test Engineer</h3>
+
+<p><strong>Bluegem IT Solutions</strong> | July 2021 – Present</p>
+
+<ul>
+
+<li>Developed and maintained scalable Selenium, Playwright and Appium automation frameworks.</li>
+
+<li>Designed API automation suites using Postman and Rest Assured.</li>
+
+<li>Integrated automation suites into Jenkins CI/CD pipelines.</li>
+
+<li>Performed performance and load testing using Apache JMeter.</li>
+
+<li>Applied AI tools such as GitHub Copilot, Claude AI and DeepEval to improve QA productivity.</li>
+
+</ul>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project">
+
+<h3>Inventory Visibility Tool</h3>
+
+<p><strong>Tools:</strong> Playwright, Selenium, Appium, Java</p>
+
+<ul>
+
+<li>Automated critical regression scenarios.</li>
+
+<li>Reduced manual testing effort through reusable automation suites.</li>
+
+</ul>
+
+</div>
+
+<div class="project">
+
+<h3>LOAN ONE Warehouse Management System</h3>
+
+<p><strong>Tools:</strong> Selenium, Java, Appium</p>
+
+<ul>
+
+<li>Built keyword-driven automation framework.</li>
+
+<li>Executed functional and non-functional testing.</li>
+
+</ul>
+
+</div>
+
+<div class="project">
+
+<h3>Health Suite Digital Platform</h3>
+
+<p><strong>Tools:</strong> Rest Assured, Postman, Apache JMeter</p>
+
+<ul>
+
+<li>Created reusable API automation framework.</li>
+
+<li>Executed performance and stress testing.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<p>
+Bachelor of Technology (B.Tech)
+</p>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Bharadwaj | Software Test Engineer
+</p>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
+```
